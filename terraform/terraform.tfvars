@@ -13,6 +13,6 @@ enable_nat_gateway   = true
 single_nat_gateway   = false
 
 enable_vpc_flow_logs         = true
-flow_logs_destination       = "cloudwatch"
+flow_logs_destination       = "cloud-watch-logs"
 flow_log_cloudwatch_log_group_name = "/aws/vpc/flow-logs"
 flow_logs_s3_bucket_name     = ""
