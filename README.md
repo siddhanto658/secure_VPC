@@ -26,7 +26,7 @@ This project demonstrates how to build a **secure, production-grade VPC** in AWS
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                              AWS REGION (us-east-1)                             │
+│                              AWS REGION (ap-south-1)                             │
 │                                                                                 │
 │  ┌───────────────────────────────────────────────────────────────────────────┐  │
 │  │                           VPC (10.0.0.0/16)                               │  │
@@ -238,12 +238,12 @@ terraform output
 
 | Subnet Type | CIDR Range | AZ | Internet Access | Resources |
 |-------------|------------|-----|-----------------|-----------|
-| Public A | 10.0.1.0/24 | us-east-1a | Direct (IGW) | ALB, NAT GW |
-| Public B | 10.0.2.0/24 | us-east-1b | Direct (IGW) | ALB, NAT GW |
-| Private A | 10.0.10.0/24 | us-east-1a | Outbound (NAT) | App servers |
-| Private B | 10.0.20.0/24 | us-east-1b | Outbound (NAT) | App servers |
-| Data A | 10.0.100.0/24 | us-east-1a | None | Databases |
-| Data B | 10.0.200.0/24 | us-east-1b | None | Databases |
+| Public A | 10.0.1.0/24 | ap-south-1a | Direct (IGW) | ALB, NAT GW |
+| Public B | 10.0.2.0/24 | ap-south-1b | Direct (IGW) | ALB, NAT GW |
+| Private A | 10.0.10.0/24 | ap-south-1a | Outbound (NAT) | App servers |
+| Private B | 10.0.20.0/24 | ap-south-1b | Outbound (NAT) | App servers |
+| Data A | 10.0.100.0/24 | ap-south-1a | None | Databases |
+| Data B | 10.0.200.0/24 | ap-south-1b | None | Databases |
 
 ---
 
@@ -262,9 +262,9 @@ terraform output
 |----------|-------------|---------|
 | `project_name` | Project name for resource tagging | `secure-vpc` |
 | `environment` | Environment (dev/staging/prod) | `prod` |
-| `aws_region` | AWS region | `us-east-1` |
+| `aws_region` | AWS region | `ap-south-1` |
 | `vpc_cidr` | VPC CIDR block | `10.0.0.0/16` |
-| `availability_zones` | List of AZs | `["us-east-1a", "us-east-1b"]` |
+| `availability_zones` | List of AZs | `["ap-south-1a", "ap-south-1b"]` |
 
 ---
 
@@ -356,7 +356,7 @@ terraform destroy
 ## ⚠️ Important Notes
 
 1. **Cost Warning**: NAT Gateways incur charges. Delete resources when not in use.
-2. **Region**: This project uses `us-east-1` by default. Change in `terraform.tfvars`.
+2. **Region**: This project uses `ap-south-1` by default. Change in `terraform.tfvars`.
 3. **SSH Key**: You'll need to create or use an existing key pair for EC2 access.
 4. **Permissions**: Ensure your IAM user has permissions to create all these resources.
 
