@@ -60,7 +60,6 @@ resource "aws_flow_log" "vpc_flow_log" {
 
   log_destination      = var.flow_logs_destination == "cloudwatch" ? aws_cloudwatch_log_group.flow_logs.arn : null
   log_destination_type = var.flow_logs_destination
-  log_format            = "${module.vpc.vpc_id} ${var.environment} ${var.project_name}"
   
   traffic_type = "ALL"
   vpc_id       = module.vpc.vpc_id
