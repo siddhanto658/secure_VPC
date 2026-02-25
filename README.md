@@ -362,9 +362,9 @@ terraform destroy
 
 ---
 
-## 🤝 Contributing
+## 🤝 Author
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Built by **siddhanto657**
 
 ---
 
