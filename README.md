@@ -99,7 +99,7 @@ This project demonstrates how to build a **secure, production-grade VPC** in AWS
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start (Terraform)
 
 ### Prerequisites
 
@@ -107,6 +107,8 @@ This project demonstrates how to build a **secure, production-grade VPC** in AWS
 - [ ] Terraform installed (v1.6+)
 - [ ] AWS CLI configured
 - [ ] IAM user with appropriate permissions
+
+> Note: This VPC was initially built using Terraform and then destroyed. Now rebuilt using AWS Console (GUI) in ap-south-1 region.
 
 ### Installation Steps
 
